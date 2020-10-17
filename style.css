@@ -1,0 +1,36 @@
+body {
+    /* background: linear-gradient(to right, red, black); */
+    background: url(frontPage.jpg);
+    background-size: 100%;
+    background-position: cover;
+}
+.links {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+.link1 {
+    color: lightcyan;
+    transition: 0.3s ease;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.link2 {
+    color: lightcyan;
+    transition: 0.3s ease;
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+.link1:hover {
+    font-size: 48px;
+}
+
+.link2:hover {
+    font-size: 48px;
+}
