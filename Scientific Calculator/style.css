@@ -190,5 +190,16 @@ h3 {
     }
     #acos, #asin, #atan, #ANS {
         font-size: 1rem;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 385px) {
+    .row button {
+        font-size: 1.1em;
+    }
+    #acos, #asin, #atan, #ANS {
+        font-size: 1rem;
+        margin-right: 0;
     }
 }
