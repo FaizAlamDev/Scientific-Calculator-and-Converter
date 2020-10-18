@@ -5,13 +5,22 @@
     font-family: 'Poppins' ,sans-serif;
 }
 
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #1f242d;
-} */
+:root {
+    --app-height: 100%;
+ }
+ 
+ html,
+ body {
+     padding: 0;
+     margin: 0;
+     overflow: hidden;
+     width: 100vw;
+     height: 100vh;
+ 
+     @media not all and (hover:hover) {
+         height: var(--app-height);
+     }
+ }
 
 .banner {
     display: flex;
@@ -31,22 +40,6 @@
     width: 100%;
     left: 0;
 }
-
-/* .banner .waves-top {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    left: 0;
-    opacity: 0;
-} */
-
-/* .top {
-    background: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-} */
 
 a {
     position: relative;
@@ -157,16 +150,12 @@ a:hover span:nth-child(4) {
     a:hover {
         transform: scale(1.2);
     }
-    .banner .waves {
-        bottom: 100px;
-        overflow:hidden;
-    }
 }
 
 @media (max-width: 430px) {
-    body {
+    /* body {
         height: 95vh;
-    }
+    } */
     a {
         font-size: 14px;
         margin: 0 20px 0 20px;
