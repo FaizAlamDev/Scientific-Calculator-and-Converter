@@ -1,36 +1,145 @@
-body {
-    /* background: linear-gradient(to right, red, black); */
-    background: url(frontPage.jpg);
-    background-size: 100%;
-    background-position: cover;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
 }
-.links {
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f242d;
+} */
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f242d;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .waves {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 }
 
-.link1 {
-    color: lightcyan;
-    transition: 0.3s ease;
+a {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+    padding: 10px 30px;
+    margin: 0 50px 0 50px;
     text-decoration: none;
-    margin: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    /* color: rgba(255,255,255, 0.4); */
+    color: #fff;
+    background: #262c37;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.5s;
 }
 
-.link2 {
-    color: lightcyan;
-    transition: 0.3s ease;
-    text-decoration: none;
-    margin: 10px;
+a:hover {
+    color: rgba(255,255,255, 1);
+    transform: scale(1.5)
+}
+
+a span {
+    display: block;
+    position: absolute;
+    background: #2894ff;
+}
+
+a span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
 }
 
 
-.link1:hover {
-    font-size: 48px;
+a span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
 }
 
-.link2:hover {
-    font-size: 48px;
+a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+a span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+
+}
+
+a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+
+}
+
+a span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+a:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+@media (max-width: 530px) {
+    a {
+        font-size: 16px;
+        margin: 0 30px 0 30px;
+    }
+
+    a:hover {
+        transform: scale(1.2);
+    }
 }
