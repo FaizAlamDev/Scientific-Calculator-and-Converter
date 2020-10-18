@@ -12,6 +12,7 @@ html {
 body {
     background: url(wood-1759566_1280.jpg);
     background-size: cover;
+    overflow: hidden;
 }
 
 .calculator {
@@ -169,7 +170,7 @@ h3 {
         width: auto;
         font-size: 1.8em;
         font-weight: bold;
-        margin-right: 20px;
+        margin-right: 12px;
     }
     .row button {
         font-size: 1.5em;
@@ -180,5 +181,14 @@ h3 {
 @media (max-width: 560px) {
     .result {
         margin-right: 5px;
+    }
+}
+
+@media (max-width: 475px) {
+    .row button {
+        font-size: 1.1em;
+    }
+    #acos, #asin, #atan, #ANS {
+        font-size: 1rem;
     }
 }
