@@ -275,11 +275,11 @@ createCalculatorButtons();
 
 // RAD and DEG
 
-let RADIAN = true;
+let DEGREE = true;
 const rad_btn = document.getElementById("rad");
 const deg_btn = document.getElementById("deg");
 
-rad_btn.classList.add("active-angle");
+deg_btn.classList.add("active-angle");
 
 function angleToggler() {
     rad_btn.classList.toggle("active-angle");
@@ -360,11 +360,11 @@ function calculator(button) {
             data.formula.pop();
         }
         else if(button.name == "rad") {
-            RADIAN = true;
+            DEGREE = false;
             angleToggler();
         }
         else if(button.name == "deg") {
-            RADIAN = false;
+            DEGREE = true;
             angleToggler();
         }
 
@@ -529,7 +529,7 @@ function updateOutputResult(result) {
 // TRIGNOMETRIC FUNCTIONS
 
 function trigo(callback, angle) {
-    if(!RADIAN) {
+    if(DEGREE) {
         angle = angle * Math.PI/180;
     }
     return callback(angle).toFixed(3);
@@ -538,7 +538,7 @@ function trigo(callback, angle) {
 function inv_trigo(callback, value) {
     let angle = callback(value);
 
-    if(!RADIAN) {
+    if(DEGREE) {
         angle = angle * 180/Math.PI;
     }
     return angle.toFixed(2);
